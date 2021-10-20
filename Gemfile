@@ -56,4 +56,10 @@ group :test do
   gem 'database_cleaner' # to clear Cucumber's test database between runs
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
+  gem 'rspec-rails'      # added in section 8.2
+  gem 'guard-rspec' 
+  gem 'ZenTest'
+  gem 'rails-controller-testing'  # rails complaining again
 end
+
+gem 'themoviedb'         # to use the movie db api

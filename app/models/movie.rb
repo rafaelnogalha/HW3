@@ -1,10 +1,12 @@
 require 'active_record'
 
 class Movie < ActiveRecord::Base
-  #self.abstract_class = true
-  #attr_accessible :title, :rating, :description, :release_date
   def self.all_ratings
-     %w(G PG PG-13 NC-17 R)
+    %w(G PG PG-13 NC-17 R)
+  end
+  def self.search_movie_by_director(director)
+    return nil if director == ""
+    movies = Movie.where(director: director)
   end
 end
 # starwars = Movie.create!(:title => 'Star Wars',

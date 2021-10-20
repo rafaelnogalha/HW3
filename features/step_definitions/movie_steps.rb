@@ -8,6 +8,10 @@ Then /I should see "(.*)" before "(.*)"/ do |m1,m2|
   expect(/[\s\S]*#{m1}[\s\S]*#{m2}/).to match(page.body)
 end
 
+Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
+  assert page.body =~ /#{arg1}.+Director.+#{arg2}/m
+end
+
 When /^I press "(.*)" button/ do |button|
   click_button button
 end
